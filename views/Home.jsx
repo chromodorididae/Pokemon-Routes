@@ -2,14 +2,13 @@ import React from 'react'
 // import DefaultLayout from '../layouts/DefaultLayout'
 
 
-function Index(props) {
+function Home(props) {
     // can't use hooks or state 
     // can't use event listeners in the same way
 
     // console.log(props.pokemon)
     // //logged successfully from res.render('Index', {pokemon}) in server
     return (
-        // <DefaultLayout title="Index View">
             <div style={{textAlign: 'center'}}>
                 <title>Home View</title>
                 <body style={{backgroundColor:'violet'}}>
@@ -20,15 +19,15 @@ function Index(props) {
                 <h2>
                 <a href="/pokemon">Index View</a>
                 <br />
-                <a href="/pokemon/:id">Show View</a>
+                {/* <a href="/pokemon/:id">Show View</a> */}
                 </h2>
                 </div>
+                {props.children}
             </body>  
             </div>
-        // </DefaultLayout>
     )
 }
 
-export default Index
+export default Home
 
 //IMAGE SOURCE: https://knowyourmeme.com/photos/677140-pokemon
